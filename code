@@ -8,21 +8,8 @@ class MyWindow:
         self.lbl3=Label(win, text='16 Characters:',font="Times")
         self.lbl4=Label(win, text='Leet Pa$$word:',font="Times")
 
-        #self.t1=Entry(bd=3,font="Times")
-        #self.t2=Entry(bd=3,font="Times")
-        #self.t3=Entry(bd=3,font="Times")
         self.t4=Entry(font="Times")
 
-        # self.btn1=Button(win, text="100% invoice")
-        # self.btn2=Button(win, text='50% invoice')
-        # self.btn3=Button(win, text="Recon invoice")
-        
-        # self.lbl1.place(x=70, y=50)
-        # self.t1.place(x=200, y=50)
-        # self.lbl2.place(x=70, y=75)
-        # self.t2.place(x=200, y=75)
-        # self.lbl3.place(x=70, y=100)
-        # self.t3.place(x=200, y=100)
         self.lbl4.place(x=70, y=200)
         self.t4.place(x=200, y=200)
 
@@ -58,25 +45,42 @@ class MyWindow:
         self.t4.insert(END, password)
 
     def Complete(self, event):
-        self.t4.delete(0, 'end')
-        RTO=float(self.t1.get())
-        Previous_Payments=float(self.t2.get())
-        Thompson_Expense=float(self.t3.get())
-        Total_Ret=RTO*.1
-        Balance=RTO-Previous_Payments
-        Balance_to_invoice_ret=RTO-Previous_Payments-(Balance*.1)-((Previous_Payments/.9)*.1)
-        result=Balance_to_invoice_ret-Thompson_Expense
-        self.t4.insert(END, float(result))
+         def shuffle(string):
+            tempList = list(string)
+            random.shuffle(tempList)
+            return ''.join(tempList)  
+        uppercaseLetter1=chr(random.randint(65,90))
+        uppercaseLetter2=chr(random.randint(65,90)) 
+        lowercaseLetter1=chr(random.randint(97,122))
+        lowercaseLetter2=chr(random.randint(97,122)) 
+        lowercaseLetter3=chr(random.randint(97,122))
+        lowercaseLetter4=chr(random.randint(97,122))
+        lowercaseLetter5=chr(random.randint(97,122))
+        lowercaseLetter6=chr(random.randint(97,122))
+        lowercaseLetter7=chr(random.randint(97,122))
+        specialcharacter1=chr(random.randint(33,64))
+        password = uppercaseLetter1 + uppercaseLetter2 + lowercaseLetter1 + lowercaseLetter2 + lowercaseLetter3 + lowercaseLetter4 + lowercaseLetter5 + lowercaseLetter6 + lowercaseLetter7 + specialcharacter1
+        password = shuffle(password)
+        self.t4.insert(END, password)
 
     def Recon(self, event):
-        self.t4.delete(0, 'end')
-        RTO=float(self.t1.get())
-        Previous_Payments=float(self.t2.get())
-        Thompson_Expense=float(self.t3.get())
-        Retainage=RTO*.1
-        Current_Payment_Due=RTO-Retainage
-        result=Current_Payment_Due-Thompson_Expense
-        self.t4.insert(END, float(result)) 
+          def shuffle(string):
+            tempList = list(string)
+            random.shuffle(tempList)
+            return ''.join(tempList)  
+        uppercaseLetter1=chr(random.randint(65,90))
+        uppercaseLetter2=chr(random.randint(65,90)) 
+        lowercaseLetter1=chr(random.randint(97,122))
+        lowercaseLetter2=chr(random.randint(97,122)) 
+        lowercaseLetter3=chr(random.randint(97,122))
+        lowercaseLetter4=chr(random.randint(97,122))
+        lowercaseLetter5=chr(random.randint(97,122))
+        lowercaseLetter6=chr(random.randint(97,122))
+        lowercaseLetter7=chr(random.randint(97,122))
+        specialcharacter1=chr(random.randint(33,64))
+        password = uppercaseLetter1 + uppercaseLetter2 + lowercaseLetter1 + lowercaseLetter2 + lowercaseLetter3 + lowercaseLetter4 + lowercaseLetter5 + lowercaseLetter6 + lowercaseLetter7 + specialcharacter1
+        password = shuffle(password)
+        self.t4.insert(END, password)
 
 window=Tk()
 mywin=MyWindow(window)
