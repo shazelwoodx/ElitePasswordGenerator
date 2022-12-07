@@ -41,6 +41,7 @@ class MyWindow:
         lowercaseLetter6=chr(random.randint(97,122))
         lowercaseLetter7=chr(random.randint(97,122))
         specialcharacter1=chr(random.randint(33,64))
+        number1=chr(random.randint(48,57))
         password = uppercaseLetter1 + uppercaseLetter2 + lowercaseLetter1 + lowercaseLetter2 + lowercaseLetter3 + lowercaseLetter4 + lowercaseLetter5 + lowercaseLetter6 + lowercaseLetter7 + specialcharacter1
         password = shuffle(password)
         self.t4.insert(END, password)
