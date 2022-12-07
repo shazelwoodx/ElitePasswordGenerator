@@ -1,6 +1,6 @@
 from tkinter import * #Pulls Tkinter GUI funstionality to the program
 import random # Allows the random command to be used
-class Password_Generator:
+class Password_Generator: #Creates Password Generator
     def __init__(self, win):
         
         self.b1=Button(win, text='8 Characters',font="Arial", command=self.Eight) #creates a button that is pressable that will initiate function below, Font is for the button not the text in the button
