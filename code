@@ -45,7 +45,7 @@ class MyWindow:
         self.t4.insert(END, password)
 
     def Complete(self, event):
-         def shuffle(string):
+        def shuffle(string):
             tempList = list(string)
             random.shuffle(tempList)
             return ''.join(tempList)  
@@ -64,7 +64,7 @@ class MyWindow:
         self.t4.insert(END, password)
 
     def Recon(self, event):
-          def shuffle(string):
+        def shuffle(string):
             tempList = list(string)
             random.shuffle(tempList)
             return ''.join(tempList)  
