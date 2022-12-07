@@ -1,0 +1,28 @@
+import random
+
+#A function do shuffle all the characters of a string
+def shuffle(string):
+  tempList = list(string)
+  random.shuffle(tempList)
+  return ''.join(tempList)
+
+#Main program starts here
+uppercaseLetter1=chr(random.randint(65,90)) #Generate a random Uppercase letter (based on ASCII code)
+uppercaseLetter2=chr(random.randint(65,90)) #Generate a random Uppercase letter (based on ASCII code)
+lowercaseLetter1=chr(random.randint(97,122)) #Generate a random Uppercase letter (based on ASCII code)
+lowercaseLetter2=chr(random.randint(97,122)) #Generate a random Uppercase letter (based on ASCII code)
+lowercaseLetter3=chr(random.randint(97,122))
+lowercaseLetter4=chr(random.randint(97,122))
+lowercaseLetter5=chr(random.randint(97,122))
+lowercaseLetter6=chr(random.randint(97,122))
+lowercaseLetter7=chr(random.randint(97,122))
+specialcharacter1=chr(random.randint(33,64))
+#Generate more characters here
+#....
+
+#Generate password using all the characters, in random order
+password = uppercaseLetter1 + uppercaseLetter2 + lowercaseLetter1 + lowercaseLetter2 + lowercaseLetter3 + lowercaseLetter4 + lowercaseLetter5 + lowercaseLetter6 + lowercaseLetter7 + specialcharacter1
+password = shuffle(password)
+
+#Ouput 
+print(password)
