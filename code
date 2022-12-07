@@ -3,26 +3,20 @@ from tkinter import *
 import random
 class MyWindow:
     def __init__(self, win):
-        self.lbl1=Label(win, text='8 Characters',font="Times")
-        self.lbl2=Label(win, text='12 Characters:',font="Times")
-        self.lbl3=Label(win, text='16 Characters:',font="Times")
-        self.lbl4=Label(win, text='Leet Pa$$word:',font="Times")
+        
+        self.b1=Button(win, text='8 Characters',font="Arial", command=self.Eight) #creates a button that is pressable that will initiate function below, Font is for the button not the text in the button
+        self.b2=Button(win, text='12 Characters',font="Arial", command=self.Twelve)#creates a button that is pressable that will initiate function below Font is for the button not the text in the button
+        self.b3=Button(win,text="16 Characters",font="Arial", command=self.Sixteen)#creates a button that is pressable that will initiate function below Font is for the button not the text in the button
 
-        self.t4=Entry(font="Times")
+        self.lbl4=Label(win, text='Leet Pa$$word:',font="Times") #creates a label that is not pressable
 
-        self.lbl4.place(x=70, y=200)
-        self.t4.place(x=200, y=200)
+        self.t4=Entry(font="Times") # creates an entry box that is typeable and will display font selected
 
-        self.b1=Button(win, text='8 Characters',font="Arial", command=self.Eight)
-        self.b1.bind('<Button-1>', self.Eight)
-        self.b2=Button(win, text='12 Characters',font="Arial", command=self.Twelve)
-        self.b2.bind('<Button-2>', self.Twelve)
-        self.b3=Button(win,text="16 Characters",font="Arial", command=self.Sixteen)
-        self.b3.bind('<Button-3>', self.Sixteen)
-
-        self.b1.place(x=100, y=50)
-        self.b2.place(x=100, y=100)
-        self.b3.place(x=100,y=150)
+        self.b1.place(x=100, y=50) # Places button in the location provided
+        self.b2.place(x=100, y=100) # Places button in the location provided
+        self.b3.place(x=100,y=150) # Places button in the location provided
+        self.lbl4.place(x=70, y=200) # Places label in the location provided
+        self.t4.place(x=200, y=200) # Places entry box in the location provided
               
     def Eight(self):
         self.t4.delete(0, 'end')
