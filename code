@@ -26,6 +26,7 @@ class MyWindow:
         self.b3.place(x=100,y=150)
               
     def Add(self):
+        self.t4.delete(0, 'end')
         def shuffle(string):
             tempList = list(string)
             random.shuffle(tempList)
@@ -45,6 +46,7 @@ class MyWindow:
         self.t4.insert(END, password)
 
     def Complete(self, event):
+        self.t4.delete(0, 'end')
         def shuffle(string):
             tempList = list(string)
             random.shuffle(tempList)
@@ -64,6 +66,7 @@ class MyWindow:
         self.t4.insert(END, password)
 
     def Recon(self, event):
+        self.t4.delete(0, 'end')
         def shuffle(string):
             tempList = list(string)
             random.shuffle(tempList)
