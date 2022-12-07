@@ -13,43 +13,36 @@ class MyWindow:
         self.lbl4.place(x=70, y=200)
         self.t4.place(x=200, y=200)
 
-        self.b1=Button(win, text='8 Characters',font="Arial", command=self.Add)
-        self.b1.bind('<Button-1>', self.Add)
-        self.b2=Button(win, text='12 Characters',font="Arial", command=self.Add)
-        self.b2.bind('<Button-2>', self.Complete)
-        self.b3=Button(win,text="16 Characters",font="Arial", command=self.Add)
+        self.b1=Button(win, text='8 Characters',font="Arial", command=self.Eight)
+        self.b1.bind('<Button-1>', self.Eight)
+        self.b2=Button(win, text='12 Characters',font="Arial", command=self.Twelve)
+        self.b2.bind('<Button-2>', self.Twelve)
+        self.b3=Button(win,text="16 Characters",font="Arial", command=self.Sixteen)
+        self.b2.bind('<Button-2>', self.Sixteen)
 
         self.b1.place(x=100, y=50)
         self.b2.place(x=100, y=100)
         self.b3.place(x=100,y=150)
               
-    def Add(self):
+    def Eight(self):
         self.t4.delete(0, 'end')
         def shuffle(string):
             tempList = list(string)
             random.shuffle(tempList)
             return ''.join(tempList)  
         uppercaseLetter1=chr(random.randint(65,90))
-        uppercaseLetter2=chr(random.randint(65,90)) 
         lowercaseLetter1=chr(random.randint(97,122))
         lowercaseLetter2=chr(random.randint(97,122)) 
         lowercaseLetter3=chr(random.randint(97,122))
         lowercaseLetter4=chr(random.randint(97,122))
         lowercaseLetter5=chr(random.randint(97,122))
-        lowercaseLetter6=chr(random.randint(97,122))
-        lowercaseLetter7=chr(random.randint(97,122))
-        lowercaseLetter8=chr(random.randint(97,122))
-        lowercaseLetter9=chr(random.randint(97,122))
-        lowercaseLetter10=chr(random.randint(97,122))
-        lowercaseLetter11=chr(random.randint(97,122))
         specialcharacter1=chr(random.randint(33,64))
-        specialcharacter2=chr(random.randint(33,64))
         number1=chr(random.randint(48,57))
         password = uppercaseLetter1 + number1 + lowercaseLetter1 + lowercaseLetter2 + lowercaseLetter3 + lowercaseLetter4 + lowercaseLetter5 + specialcharacter1
         password = shuffle(password)
         self.t4.insert(END, password)
 
-    def Complete(self, event):
+    def Twelve(self):
         self.t4.delete(0, 'end')
         def shuffle(string):
             tempList = list(string)
@@ -64,10 +57,6 @@ class MyWindow:
         lowercaseLetter5=chr(random.randint(97,122))
         lowercaseLetter6=chr(random.randint(97,122))
         lowercaseLetter7=chr(random.randint(97,122))
-        lowercaseLetter8=chr(random.randint(97,122))
-        lowercaseLetter9=chr(random.randint(97,122))
-        lowercaseLetter10=chr(random.randint(97,122))
-        lowercaseLetter11=chr(random.randint(97,122))
         specialcharacter1=chr(random.randint(33,64))
         specialcharacter2=chr(random.randint(33,64))
         number1=chr(random.randint(48,57))
@@ -75,7 +64,7 @@ class MyWindow:
         password = shuffle(password)
         self.t4.insert(END, password)
 
-    def Recon(self, event):
+    def Sixteen(self):
         self.t4.delete(0, 'end')
         def shuffle(string):
             tempList = list(string)
