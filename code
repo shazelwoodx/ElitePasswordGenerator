@@ -38,7 +38,12 @@ class MyWindow:
         lowercaseLetter5=chr(random.randint(97,122))
         lowercaseLetter6=chr(random.randint(97,122))
         lowercaseLetter7=chr(random.randint(97,122))
+        lowercaseLetter8=chr(random.randint(97,122))
+        lowercaseLetter9=chr(random.randint(97,122))
+        lowercaseLetter10=chr(random.randint(97,122))
+        lowercaseLetter11=chr(random.randint(97,122))
         specialcharacter1=chr(random.randint(33,64))
+        specialcharacter2=chr(random.randint(33,64))
         number1=chr(random.randint(48,57))
         password = uppercaseLetter1 + number1 + lowercaseLetter1 + lowercaseLetter2 + lowercaseLetter3 + lowercaseLetter4 + lowercaseLetter5 + specialcharacter1
         password = shuffle(password)
@@ -59,6 +64,10 @@ class MyWindow:
         lowercaseLetter5=chr(random.randint(97,122))
         lowercaseLetter6=chr(random.randint(97,122))
         lowercaseLetter7=chr(random.randint(97,122))
+        lowercaseLetter8=chr(random.randint(97,122))
+        lowercaseLetter9=chr(random.randint(97,122))
+        lowercaseLetter10=chr(random.randint(97,122))
+        lowercaseLetter11=chr(random.randint(97,122))
         specialcharacter1=chr(random.randint(33,64))
         specialcharacter2=chr(random.randint(33,64))
         number1=chr(random.randint(48,57))
@@ -88,7 +97,7 @@ class MyWindow:
         specialcharacter1=chr(random.randint(33,64))
         specialcharacter2=chr(random.randint(33,64))
         number1=chr(random.randint(48,57))
-        password =uppercaseLetter1 + uppercaseLetter2 + number1 + lowercaseLetter1 + lowercaseLetter2 + lowercaseLetter3 + lowercaseLetter4 + lowercaseLetter5 + lowercaseLetter6 + lowercaseLetter7+ lowercaseLetter8 + lowercaseLetter9 + lowercaseLetter10+ lowercaseLetter11 + specialcharacter1 + specialcharacter2
+        password = uppercaseLetter1 + uppercaseLetter2 + number1 + lowercaseLetter1 + lowercaseLetter2 + lowercaseLetter3 + lowercaseLetter4 + lowercaseLetter5 + lowercaseLetter6 + lowercaseLetter7+ lowercaseLetter8 + lowercaseLetter9 + lowercaseLetter10+ lowercaseLetter11 + specialcharacter1 + specialcharacter2
         password = shuffle(password)
         self.t4.insert(END, password)
 
