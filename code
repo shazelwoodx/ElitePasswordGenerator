@@ -18,7 +18,7 @@ class MyWindow:
         self.b2=Button(win, text='12 Characters',font="Arial", command=self.Twelve)
         self.b2.bind('<Button-2>', self.Twelve)
         self.b3=Button(win,text="16 Characters",font="Arial", command=self.Sixteen)
-        self.b2.bind('<Button-2>', self.Sixteen)
+        self.b3.bind('<Button-3>', self.Sixteen)
 
         self.b1.place(x=100, y=50)
         self.b2.place(x=100, y=100)
