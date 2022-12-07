@@ -1,6 +1,5 @@
-from os import times
-from tkinter import *
-import random
+from tkinter import * #Pulls Tkinter GUI funstionality to the program
+import random # Allows the random command to be used
 class Password_Generator:
     def __init__(self, win):
         
@@ -20,7 +19,7 @@ class Password_Generator:
               
     def Eight(self): #when the 8 character button is pressed, this function activates 
         self.t4.delete(0, 'end') #Erases what is present in the entrybox so the new entry will be the only password showing
-        def shuffle(string): #This function allows the ramdom characters to be selected
+        def shuffle(string): #This function allows the ramdom characters to be shuffled
             tempList = list(string) #Convertes the stirng into a list and saves it as a variable
             random.shuffle(tempList) #shuffles the variable that is a list
             return ''.join(tempList) #Ends the function
@@ -38,7 +37,7 @@ class Password_Generator:
 
     def Twelve(self): #when the 12 character button is pressed, this function activates 
         self.t4.delete(0, 'end') #Erases what is present in the entrybox so the new entry will be the only password showing
-        def shuffle(string): #This function allows the ramdom characters to be selected
+        def shuffle(string): #This function allows the ramdom characters to be shuffled
             tempList = list(string) #Convertes the stirng into a list and saves it as a variable
             random.shuffle(tempList) #shuffles the variable that is a list
             return ''.join(tempList) #Ends the function
@@ -60,7 +59,7 @@ class Password_Generator:
 
     def Sixteen(self): #when the 16 character button is pressed, this function activates 
         self.t4.delete(0, 'end') #Erases what is present in the entrybox so the new entry will be the only password showing
-        def shuffle(string): #This function allows the ramdom characters to be selected
+        def shuffle(string): #This function allows the ramdom characters to be shuffled
             tempList = list(string) #Convertes the stirng into a list and saves it as a variable
             random.shuffle(tempList) #shuffles the variable that is a list
             return ''.join(tempList) #Ends the function
