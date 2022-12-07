@@ -3,7 +3,7 @@ from tkinter import *
 import random
 class MyWindow:
     def __init__(self, win):
-        self.lbl1=Label(win, text='8 Character:s',font="Times")
+        self.lbl1=Label(win, text='8 Characters',font="Times")
         self.lbl2=Label(win, text='12 Characters:',font="Times")
         self.lbl3=Label(win, text='16 Characters:',font="Times")
         self.lbl4=Label(win, text='Leet Pa$$word:',font="Times")
