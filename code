@@ -13,13 +13,11 @@ class MyWindow:
         self.lbl4.place(x=70, y=200)
         self.t4.place(x=200, y=200)
 
-
         self.b1=Button(win, text='8 Characters',font="Arial", command=self.Add)
         self.b1.bind('<Button-1>', self.Add)
-        self.b2=Button(win, text='12 Characters',font="Arial")
+        self.b2=Button(win, text='12 Characters',font="Arial", command=self.Add)
         self.b2.bind('<Button-2>', self.Complete)
-        self.b3=Button(win,text="16 Characters",font="Arial")
-        self.b3.bind('<Button-3>',self.Recon)
+        self.b3=Button(win,text="16 Characters",font="Arial", command=self.Add)
 
         self.b1.place(x=100, y=50)
         self.b2.place(x=100, y=100)
