@@ -36,7 +36,7 @@ class Password_Generator: #Creates Password Generator
         password = shuffle(password) # shuffles the password
         self.t4.insert(END, password) #Places the new variable password in the entry box
         def clipboard(txt): #function will send the password created to the clipboard
-            cmd='echo '+txt.strip()+'|clip'
+            cmd='echo '+txt.strip()+'|clip' #removes spaces so the new variable will just be the password
             return check_call(cmd, shell=True) #At the end of the function, it will run the command listed.
         clipboard(password) #Saved the variable password to the clipboard
 
@@ -62,7 +62,7 @@ class Password_Generator: #Creates Password Generator
         password = shuffle(password) #shuffles the password
         self.t4.insert(END, password) #Places the new variable password in the entry box
         def clipboard(txt): #function will send the password created to the clipboard
-            cmd='echo '+txt.strip()+'|clip' #creates a variable to is a command
+            cmd='echo '+txt.strip()+'|clip' #removes spaces so the new variable will just be the password
             return check_call(cmd, shell=True) #At the end of the function, it will run the command listed.
         clipboard(password) #Saved the variable password to the clipboard
 
@@ -92,7 +92,7 @@ class Password_Generator: #Creates Password Generator
         password = shuffle(password) #Shuffles the password
         self.t4.insert(END, password) #Places the new variable password in the entry box
         def clipboard(txt): #function will send the password created to the clipboard
-            cmd='echo '+txt.strip()+'|clip'
+            cmd='echo '+txt.strip()+'|clip' #removes spaces so the new variable will just be the password
             return check_call(cmd, shell=True) #At the end of the function, it will run the command listed.
         clipboard(password) #Saved the variable password to the clipboard
 
