@@ -96,7 +96,7 @@ class Password_Generator: #Creates Password Generator
             return check_call(cmd, shell=True) #At the end of the function, it will run the command listed.
         clipboard(password) #Saved the variable password to the clipboard
 
-window=Tk() #Opens a window
+window=Tk() #Opens a window with the specs listed above
 mywin=Password_Generator(window) #uses the class above (Password_Generator line 4) and all functions in the class
 window.title('133t Pa$$word Generator') #Titles the Popup Windo
 window.geometry("500x400") #Dictates how large the Window is when opened
