@@ -1,7 +1,8 @@
 from tkinter import * #Pulls Tkinter GUI funstionality to the program
 import random # Allows the random command to be used
+from subprocess import check_call #Imports the use of check_call
 class Password_Generator: #Creates Password Generator
-    def __init__(self, win):
+    def __init__(self, win): #Constructs the objects (buttons, labels, Etc) for the class
         
         self.b1=Button(win, text='8 Characters',font="Arial", command=self.Eight) #creates a button that is pressable that will initiate function below, Font is for the button not the text in the button
         self.b2=Button(win, text='12 Characters',font="Arial", command=self.Twelve)#creates a button that is pressable that will initiate function below Font is for the button not the text in the button
@@ -34,6 +35,10 @@ class Password_Generator: #Creates Password Generator
         password = uppercaseLetter1 + number1 + lowercaseLetter1 + lowercaseLetter2 + lowercaseLetter3 + lowercaseLetter4 + lowercaseLetter5 + specialcharacter1 #adds all the variable from above and add them to one new variable
         password = shuffle(password) # shuffles the password
         self.t4.insert(END, password) #Places the new variable password in the entry box
+        def clipboard(txt): #function will send the password created to the clipboard
+            cmd='echo '+txt.strip()+'|clip'
+            return check_call(cmd, shell=True) #At the end of the function, it will run the command listed.
+        clipboard(password) #Saved the variable password to the clipboard
 
     def Twelve(self): #when the 12 character button is pressed, this function activates 
         self.t4.delete(0, 'end') #Erases what is present in the entrybox so the new entry will be the only password showing
@@ -56,6 +61,10 @@ class Password_Generator: #Creates Password Generator
         password = uppercaseLetter1 + uppercaseLetter2 + number1 + lowercaseLetter1 + lowercaseLetter2 + lowercaseLetter3 + lowercaseLetter4 + lowercaseLetter5 + lowercaseLetter6 + lowercaseLetter7 + specialcharacter1 + specialcharacter2 #adds all the variable from above and add them to one new variable
         password = shuffle(password) #shuffles the password
         self.t4.insert(END, password) #Places the new variable password in the entry box
+        def clipboard(txt): #function will send the password created to the clipboard
+            cmd='echo '+txt.strip()+'|clip' #creates a variable to is a command
+            return check_call(cmd, shell=True) #At the end of the function, it will run the command listed.
+        clipboard(password) #Saved the variable password to the clipboard
 
     def Sixteen(self): #when the 16 character button is pressed, this function activates 
         self.t4.delete(0, 'end') #Erases what is present in the entrybox so the new entry will be the only password showing
@@ -82,6 +91,10 @@ class Password_Generator: #Creates Password Generator
         password = uppercaseLetter1 + uppercaseLetter2 + number1 + lowercaseLetter1 + lowercaseLetter2 + lowercaseLetter3 + lowercaseLetter4 + lowercaseLetter5 + lowercaseLetter6 + lowercaseLetter7+ lowercaseLetter8 + lowercaseLetter9 + lowercaseLetter10+ lowercaseLetter11 + specialcharacter1 + specialcharacter2 #adds all the variable from above and add them to one new variable
         password = shuffle(password) #Shuffles the password
         self.t4.insert(END, password) #Places the new variable password in the entry box
+        def clipboard(txt): #function will send the password created to the clipboard
+            cmd='echo '+txt.strip()+'|clip'
+            return check_call(cmd, shell=True) #At the end of the function, it will run the command listed.
+        clipboard(password) #Saved the variable password to the clipboard
 
 window=Tk() #Opens a window
 mywin=Password_Generator(window) #uses the class above (Password_Generator line 4) and all functions in the class
