@@ -30,7 +30,7 @@ class Password_Generator: #Creates Password Generator
         lowercaseLetter3=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
         lowercaseLetter4=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
         lowercaseLetter5=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
-        specialcharacter1=chr(random.randint(33,64)) #Randomly chooses a special character from the ascii list within the range selected
+        specialcharacter1=chr(random.randint(39,47)) #Randomly chooses a special character from the ascii list within the range selected
         number1=chr(random.randint(48,57)) #Randomly chooses a number from the ascii list within the range selected
         password = uppercaseLetter1 + number1 + lowercaseLetter1 + lowercaseLetter2 + lowercaseLetter3 + lowercaseLetter4 + lowercaseLetter5 + specialcharacter1 #adds all the variable from above and add them to one new variable
         password = shuffle(password) # shuffles the password
@@ -55,8 +55,8 @@ class Password_Generator: #Creates Password Generator
         lowercaseLetter5=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
         lowercaseLetter6=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
         lowercaseLetter7=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
-        specialcharacter1=chr(random.randint(33,64)) #Randomly chooses a special character from the ascii list within the range selected
-        specialcharacter2=chr(random.randint(33,64)) #Randomly chooses a special character from the ascii list within the range selected
+        specialcharacter1=chr(random.randint(39,47)) #Randomly chooses a special character from the ascii list within the range selected
+        specialcharacter2=chr(random.randint(39,47)) #Randomly chooses a special character from the ascii list within the range selected
         number1=chr(random.randint(48,57)) #Randomly chooses a number from the ascii list within the range selected
         password = uppercaseLetter1 + uppercaseLetter2 + number1 + lowercaseLetter1 + lowercaseLetter2 + lowercaseLetter3 + lowercaseLetter4 + lowercaseLetter5 + lowercaseLetter6 + lowercaseLetter7 + specialcharacter1 + specialcharacter2 #adds all the variable from above and add them to one new variable
         password = shuffle(password) #shuffles the password
@@ -85,8 +85,8 @@ class Password_Generator: #Creates Password Generator
         lowercaseLetter9=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
         lowercaseLetter10=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
         lowercaseLetter11=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
-        specialcharacter1=chr(random.randint(33,64)) #Randomly chooses a special character from the ascii list within the range selected
-        specialcharacter2=chr(random.randint(33,64)) #Randomly chooses a special character from the ascii list within the range selected
+        specialcharacter1=chr(random.randint(39,47)) #Randomly chooses a special character from the ascii list within the range selected
+        specialcharacter2=chr(random.randint(39,47)) #Randomly chooses a special character from the ascii list within the range selected
         number1=chr(random.randint(48,57)) #Randomly chooses a number from the ascii list within the range selected
         password = uppercaseLetter1 + uppercaseLetter2 + number1 + lowercaseLetter1 + lowercaseLetter2 + lowercaseLetter3 + lowercaseLetter4 + lowercaseLetter5 + lowercaseLetter6 + lowercaseLetter7+ lowercaseLetter8 + lowercaseLetter9 + lowercaseLetter10+ lowercaseLetter11 + specialcharacter1 + specialcharacter2 #adds all the variable from above and add them to one new variable
         password = shuffle(password) #Shuffles the password
