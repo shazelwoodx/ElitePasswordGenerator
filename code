@@ -4,23 +4,23 @@ from subprocess import check_call #Imports the use of check_call
 class Password_Generator: #Creates Password Generator
     def __init__(self, win): #Constructs the objects (buttons, labels, Etc) for the class
         
-        self.b1=Button(win, text='8 Characters',font="Arial", command=self.Eight) #Creates a button that is pressable that will initiate function below, Font is for the button not the text in the button
-        self.b2=Button(win, text='12 Characters',font="Arial", command=self.Twelve) #Creates a button that is pressable that will initiate function below Font is for the button not the text in the button
-        self.b3=Button(win,text="16 Characters",font="Arial", command=self.Sixteen) #Creates a button that is pressable that will initiate function below Font is for the button not the text in the button
+        self.b1=Button(win, text='8 Characters',font=("Georgia", 12, 'bold'), background= 'black', foreground= 'magenta', command=self.Eight) #Creates a button that is pressable that will initiate function below, Font is for the button not the text in the button
+        self.b2=Button(win, text='12 Characters',font=("Georgia", 12, 'bold'), command=self.Twelve) #Creates a button that is pressable that will initiate function below Font is for the button not the text in the button
+        self.b3=Button(win,text="16 Characters",font=("Georgia", 12, 'bold'), command=self.Sixteen) #Creates a button that is pressable that will initiate function below Font is for the button not the text in the button
 
-        self.lbl4=Label(win, text='Leet Pa$$word:',font="Times") #Creates a label that is not pressable
+        self.lbl4=Label(win, text='L33t Pa$$word:',font=("Georgia", 10, 'bold')) #Creates a label that is not pressable
 
-        self.t4=Entry(font="Times") #Creates an entry box that is typeable and will display font selected
+        self.t4=Entry(font="Georgia") #Creates an entry box that is typeable and will display font selected
 
-        self.b1.place(x=100, y=50) #Places button in the location provided
-        self.b2.place(x=100, y=100) #Places button in the location provided
-        self.b3.place(x=100,y=150) #Places button in the location provided
-        self.lbl4.place(x=70, y=200) #Places label in the location provided
-        self.t4.place(x=200, y=200) #Places entry box in the location provided
+        self.b1.place(x=140, y=50) #Places button in the location provided
+        self.b2.place(x=140, y=100) #Places button in the location provided
+        self.b3.place(x=140,y=150) #Places button in the location provided
+        self.lbl4.place(x=38, y=200) #Places label in the location provided
+        self.t4.place(x=156, y=200) #Places entry box in the location provided
               
     def Eight(self): #When the 8 character button is pressed, this function activates 
         self.t4.delete(0, 'end') #Erases what is present in the entrybox so the new entry will be the only password showing
-        def shuffle(string): #This function allows the ramdom characters to be shuffled
+        def shuffle(string): #This function allows the random characters to be shuffled
             tempList = list(string) #Converts the string into a list and saves it as a variable
             random.shuffle(tempList) #Shuffles the variable that is a list
             return ''.join(tempList) #Ends the function
@@ -99,5 +99,5 @@ class Password_Generator: #Creates Password Generator
 window=Tk() #Opens a window with the specs listed above
 mywin=Password_Generator(window) #Uses the class above (Password_Generator line 4) and all functions in the class
 window.title('133t Pa$$word Generator') #Titles the Popup Windo
-window.geometry("500x400") #Dictates how large the Window is when opened
+window.geometry("400x300") #Dictates how large the Window is when opened
 window.mainloop() #Keeps the window(Password_Generator) open
