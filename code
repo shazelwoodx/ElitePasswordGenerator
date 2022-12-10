@@ -4,11 +4,11 @@ from subprocess import check_call #Imports the use of check_call
 class Password_Generator: #Creates Password Generator
     def __init__(self, win): #Constructs the objects (buttons, labels, Etc) for the class
         
-        self.b1=Button(win, text='8 Characters',font=("Georgia", 12, 'bold'), background= 'black', foreground= 'magenta', command=self.Eight) #Creates a button that is pressable that will initiate function below, Font is for the button not the text in the button
-        self.b2=Button(win, text='12 Characters',font=("Georgia", 12, 'bold'), command=self.Twelve) #Creates a button that is pressable that will initiate function below Font is for the button not the text in the button
-        self.b3=Button(win,text="16 Characters",font=("Georgia", 12, 'bold'), command=self.Sixteen) #Creates a button that is pressable that will initiate function below Font is for the button not the text in the button
+        self.b1=Button(win, text='8 Characters',font=("Georgia", 12, 'bold'), background= '#5B2C6F', foreground= 'white', command=self.Eight) #Creates a button that is pressable that will initiate function below, Font is for the button not the text in the button
+        self.b2=Button(win, text='12 Characters',font=("Georgia", 12, 'bold'), background= '#5B2C6F', foreground= 'white', command=self.Twelve) #Creates a button that is pressable that will initiate function below Font is for the button not the text in the button
+        self.b3=Button(win,text="16 Characters",font=("Georgia", 12, 'bold'), background= '#5B2C6F', foreground= 'white', command=self.Sixteen) #Creates a button that is pressable that will initiate function below Font is for the button not the text in the button
 
-        self.lbl4=Label(win, text='L33t Pa$$word:',font=("Georgia", 10, 'bold')) #Creates a label that is not pressable
+        self.lbl4=Label(win, text='L33t Pa$$word:',font=("Georgia", 10, 'bold'), background= '#5B2C6F', foreground= 'white') #Creates a label that is not pressable
 
         self.t4=Entry(font="Georgia") #Creates an entry box that is typeable and will display font selected
 
@@ -98,6 +98,7 @@ class Password_Generator: #Creates Password Generator
 
 window=Tk() #Opens a window with the specs listed above
 mywin=Password_Generator(window) #Uses the class above (Password_Generator line 4) and all functions in the class
-window.title('133t Pa$$word Generator') #Titles the Popup Windo
+window.title('133t Pa$$word Generator') #Titles the Popup Window
 window.geometry("400x300") #Dictates how large the Window is when opened
+window.configure(bg="#117864")
 window.mainloop() #Keeps the window(Password_Generator) open
