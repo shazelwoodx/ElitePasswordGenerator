@@ -1,14 +1,15 @@
+
 from tkinter import * #Pulls Tkinter GUI funstionality to the program
 import random #Allows the random command to be used
 from subprocess import check_call #Imports the use of check_call
 class Password_Generator: #Creates Password Generator
     def __init__(self, win): #Constructs the objects (buttons, labels, Etc) for the class
         
-        self.b1=Button(win, text='8 Characters',font=("Georgia", 12, 'bold'), background= '#5B2C6F', foreground= 'white', command=self.Eight) #Creates a button that is pressable that will initiate function below, Font is for the button not the text in the button
-        self.b2=Button(win, text='12 Characters',font=("Georgia", 12, 'bold'), background= '#5B2C6F', foreground= 'white', command=self.Twelve) #Creates a button that is pressable that will initiate function below Font is for the button not the text in the button
-        self.b3=Button(win,text="16 Characters",font=("Georgia", 12, 'bold'), background= '#5B2C6F', foreground= 'white', command=self.Sixteen) #Creates a button that is pressable that will initiate function below Font is for the button not the text in the button
+        self.b1=Button(win, text='12 Characters',font=("Georgia", 12, 'bold'), background= '#5B2C6F', foreground= 'white', command=self.Twelve) #Creates a button that is pressable that will initiate function below, Font is for the button not the text in the button
+        self.b2=Button(win, text='16 Characters',font=("Georgia", 12, 'bold'), background= '#5B2C6F', foreground= 'white', command=self.Sixteen) #Creates a button that is pressable that will initiate function below Font is for the button not the text in the button
+        self.b3=Button(win,text="20 Characters",font=("Georgia", 12, 'bold'), background= '#5B2C6F', foreground= 'white', command=self.Twenty) #Creates a button that is pressable that will initiate function below Font is for the button not the text in the button
 
-        self.lbl4=Label(win, text='L33t Pa$$word:',font=("Georgia", 10, 'bold'), background= '#5B2C6F', foreground= 'white') #Creates a label that is not pressable
+        self.lbl4=Label(win, text='1337 Password:',font=("Georgia", 10, 'bold'), background= '#5B2C6F', foreground= 'white') #Creates a label that is not pressable
 
         self.t4=Entry(font="Georgia") #Creates an entry box that is typeable and will display font selected
 
@@ -18,33 +19,11 @@ class Password_Generator: #Creates Password Generator
         self.lbl4.place(x=38, y=200) #Places label in the location provided
         self.t4.place(x=156, y=200) #Places entry box in the location provided
               
-    def Eight(self): #When the 8 character button is pressed, this function activates 
+    def Twelve(self): #When the 12 character button is pressed, this function activates 
         self.t4.delete(0, 'end') #Erases what is present in the entrybox so the new entry will be the only password showing
         def shuffle(string): #This function allows the random characters to be shuffled
             tempList = list(string) #Converts the string into a list and saves it as a variable
             random.shuffle(tempList) #Shuffles the variable that is a list
-            return ''.join(tempList) #Ends the function
-        uppercaseLetter1=chr(random.randint(65,90)) #Randomly chooses an uppercase letter from the ascii list within the range selected
-        lowercaseLetter1=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
-        lowercaseLetter2=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
-        lowercaseLetter3=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
-        lowercaseLetter4=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
-        lowercaseLetter5=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
-        specialcharacter1=chr(random.randint(39,47)) #Randomly chooses a special character from the ascii list within the range selected
-        number1=chr(random.randint(48,57)) #Randomly chooses a number from the ascii list within the range selected
-        password = uppercaseLetter1 + number1 + lowercaseLetter1 + lowercaseLetter2 + lowercaseLetter3 + lowercaseLetter4 + lowercaseLetter5 + specialcharacter1 #Adds all the variable from above and add them to one new variable
-        password = shuffle(password) #Shuffles the password
-        self.t4.insert(END, password) #Places the new variable password in the entry box
-        def clipboard(txt): #Function will send the password created to the clipboard, txt is replaced with the password
-            cmd='echo '+txt.strip()+'|clip' #Removes spaces so the new variable will just be the password
-            return check_call(cmd, shell=True) #At the end of the function, it will run the command listed.
-        clipboard(password) #Saved the variable password to the clipboard
-
-    def Twelve(self): #When the 12 character button is pressed, this function activates 
-        self.t4.delete(0, 'end') #Erases what is present in the entrybox so the new entry will be the only password showing
-        def shuffle(string): #This function allows the ramdom characters to be shuffled
-            tempList = list(string) #Convertes the stirng into a list and saves it as a variable
-            random.shuffle(tempList) #shuffles the variable that is a list
             return ''.join(tempList) #Ends the function
         uppercaseLetter1=chr(random.randint(65,90)) #Randomly chooses an uppercase letter from the ascii list within the range selected
         uppercaseLetter2=chr(random.randint(65,90)) #Randomly chooses an uppercase letter from the ascii list within the range selected
@@ -54,11 +33,11 @@ class Password_Generator: #Creates Password Generator
         lowercaseLetter4=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
         lowercaseLetter5=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
         lowercaseLetter6=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
-        lowercaseLetter7=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
         specialcharacter1=chr(random.randint(39,47)) #Randomly chooses a special character from the ascii list within the range selected
         specialcharacter2=chr(random.randint(39,47)) #Randomly chooses a special character from the ascii list within the range selected
         number1=chr(random.randint(48,57)) #Randomly chooses a number from the ascii list within the range selected
-        password = uppercaseLetter1 + uppercaseLetter2 + number1 + lowercaseLetter1 + lowercaseLetter2 + lowercaseLetter3 + lowercaseLetter4 + lowercaseLetter5 + lowercaseLetter6 + lowercaseLetter7 + specialcharacter1 + specialcharacter2 #Adds all the variable from above and add them to one new variable
+        number2=chr(random.randint(48,57)) #Randomly chooses a number from the ascii list within the range selected
+        password = uppercaseLetter1 + uppercaseLetter2+ number1 + number2 + lowercaseLetter1 + lowercaseLetter2 + lowercaseLetter3 + lowercaseLetter4 + lowercaseLetter5 + lowercaseLetter6 + specialcharacter1 + specialcharacter2 #Adds all the variable from above and add them to one new variable
         password = shuffle(password) #Shuffles the password
         self.t4.insert(END, password) #Places the new variable password in the entry box
         def clipboard(txt): #Function will send the password created to the clipboard, txt is replaced with the password
@@ -83,12 +62,46 @@ class Password_Generator: #Creates Password Generator
         lowercaseLetter7=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
         lowercaseLetter8=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
         lowercaseLetter9=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
+        specialcharacter1=chr(random.randint(39,47)) #Randomly chooses a special character from the ascii list within the range selected
+        specialcharacter2=chr(random.randint(39,47)) #Randomly chooses a special character from the ascii list within the range selected
+        number1=chr(random.randint(48,57)) #Randomly chooses a number from the ascii list within the range selected
+        number2=chr(random.randint(48,57)) #Randomly chooses a number from the ascii list within the range selected
+        number3=chr(random.randint(48,57)) #Randomly chooses a number from the ascii list within the range selected
+        password = uppercaseLetter1 + uppercaseLetter2 + number1 + number2 + number3+ lowercaseLetter1 + lowercaseLetter2 + lowercaseLetter3 + lowercaseLetter4 + lowercaseLetter5 + lowercaseLetter6 + lowercaseLetter7+ lowercaseLetter8+ lowercaseLetter9 + specialcharacter1 + specialcharacter2 #Adds all the variable from above and add them to one new variable
+        password = shuffle(password) #Shuffles the password
+        self.t4.insert(END, password) #Places the new variable password in the entry box
+        def clipboard(txt): #Function will send the password created to the clipboard, txt is replaced with the password
+            cmd='echo '+txt.strip()+'|clip' #Removes spaces so the new variable will just be the password
+            return check_call(cmd, shell=True) #At the end of the function, it will run the command listed.
+        clipboard(password) #Saved the variable password to the clipboard
+
+    def Twenty(self): #When the 20 character button is pressed, this function activates 
+        self.t4.delete(0, 'end') #Erases what is present in the entrybox so the new entry will be the only password showing
+        def shuffle(string): #This function allows the ramdom characters to be shuffled
+            tempList = list(string) #Convertes the stirng into a list and saves it as a variable
+            random.shuffle(tempList) #shuffles the variable that is a list
+            return ''.join(tempList) #Ends the function
+        uppercaseLetter1=chr(random.randint(65,90)) #Randomly chooses an uppercase letter from the ascii list within the range selected
+        uppercaseLetter2=chr(random.randint(65,90)) #Randomly chooses an uppercase letter from the ascii list within the range selected
+        uppercaseLetter3=chr(random.randint(65,90)) #Randomly chooses an uppercase letter from the ascii list within the range selected
+        lowercaseLetter1=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
+        lowercaseLetter2=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
+        lowercaseLetter3=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
+        lowercaseLetter4=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
+        lowercaseLetter5=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
+        lowercaseLetter6=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
+        lowercaseLetter7=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
+        lowercaseLetter8=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
+        lowercaseLetter9=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
         lowercaseLetter10=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
         lowercaseLetter11=chr(random.randint(97,122)) #Randomly chooses a lowercase letter from the ascii list within the range selected
         specialcharacter1=chr(random.randint(39,47)) #Randomly chooses a special character from the ascii list within the range selected
         specialcharacter2=chr(random.randint(39,47)) #Randomly chooses a special character from the ascii list within the range selected
+        specialcharacter3=chr(random.randint(39,47)) #Randomly chooses a special character from the ascii list within the range selected
         number1=chr(random.randint(48,57)) #Randomly chooses a number from the ascii list within the range selected
-        password = uppercaseLetter1 + uppercaseLetter2 + number1 + lowercaseLetter1 + lowercaseLetter2 + lowercaseLetter3 + lowercaseLetter4 + lowercaseLetter5 + lowercaseLetter6 + lowercaseLetter7+ lowercaseLetter8 + lowercaseLetter9 + lowercaseLetter10+ lowercaseLetter11 + specialcharacter1 + specialcharacter2 #Adds all the variable from above and add them to one new variable
+        number2=chr(random.randint(48,57)) #Randomly chooses a number from the ascii list within the range selected
+        number3=chr(random.randint(48,57)) #Randomly chooses a number from the ascii list within the range selected
+        password = uppercaseLetter1 + uppercaseLetter2 + uppercaseLetter3 + number1 +number2 + number3 + lowercaseLetter1 + lowercaseLetter2 + lowercaseLetter3 + lowercaseLetter4 + lowercaseLetter5 + lowercaseLetter6 + lowercaseLetter7+ lowercaseLetter8 + lowercaseLetter9 + lowercaseLetter10+ lowercaseLetter11 + specialcharacter1 + specialcharacter2 + specialcharacter3 #Adds all the variable from above and add them to one new variable
         password = shuffle(password) #Shuffles the password
         self.t4.insert(END, password) #Places the new variable password in the entry box
         def clipboard(txt): #Function will send the password created to the clipboard, txt is replaced with the password
@@ -98,7 +111,7 @@ class Password_Generator: #Creates Password Generator
 
 window=Tk() #Opens a window with the specs listed above
 mywin=Password_Generator(window) #Uses the class above (Password_Generator line 4) and all functions in the class
-window.title('133t Pa$$word Generator') #Titles the Popup Window
+window.title('1337 Password Generator') #Titles the Popup Window
 window.geometry("400x300") #Dictates how large the Window is when opened
 window.configure(bg="#117864")
 window.mainloop() #Keeps the window(Password_Generator) open
