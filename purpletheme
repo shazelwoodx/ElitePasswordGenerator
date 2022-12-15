@@ -10,7 +10,7 @@ class Password_Generator: #Creates Password Generator
     def __init__(self, win): #Constructs the objects (buttons, labels, Etc) for the class
         
         
-        self.b1=Button(win, text='12 Characters',font=("Georgia", 12, 'bold'), highlightbackground='#FDD023', highlightcolor='#FDD023',highlightthickness=3, bd= 3, background=  '#461D7C', foreground= 'White', command=self.Twelve) #Creates a button that is pressable that will initiate function below, Font is for the button not the text in the button
+        self.b1=Button(win, text='12 Characters',font=("Georgia", 12, 'bold'), background=  '#461D7C', foreground= 'White', command=self.Twelve) #Creates a button that is pressable that will initiate function below, Font is for the button not the text in the button
         self.b2=Button(win, text='16 Characters',font=("Georgia", 12, 'bold'), background= '#461D7C', foreground= 'White', command=self.Sixteen) #Creates a button that is pressable that will initiate function below Font is for the button not the text in the button
         self.b3=Button(win,text="20 Characters",font=("Georgia", 12, 'bold'), background= '#461D7C', foreground= 'White', command=self.Twenty) #Creates a button that is pressable that will initiate function below Font is for the button not the text in the button
         self.b4=Button(win,text="Close",font=("Georgia", 12, 'bold'), background= '#461D7C', foreground= 'White', command=window.destroy) #Creates a button that is pressable that will initiate function below Font is for the button not the text in the button
