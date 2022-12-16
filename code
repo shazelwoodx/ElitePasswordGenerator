@@ -1,4 +1,3 @@
-
 from tkinter import * #Pulls Tkinter GUI funstionality to the program
 from tkinter import ttk
 import random #Allows the random command to be used
