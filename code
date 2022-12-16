@@ -1,24 +1,29 @@
 
 from tkinter import * #Pulls Tkinter GUI funstionality to the program
+from tkinter import ttk
 import random #Allows the random command to be used
 from subprocess import check_call #Imports the use of check_call
 class Password_Generator: #Creates Password Generator
+
     def __init__(self, win): #Constructs the objects (buttons, labels, Etc) for the class
         
-        self.b1=Button(win, text='12 Characters',font=("Georgia", 12, 'bold'), background=  '#000000', foreground= '#272AB0', command=self.Twelve) #Creates a button that is pressable that will initiate function below, Font is for the button not the text in the button
-        self.b2=Button(win, text='16 Characters',font=("Georgia", 12, 'bold'), background= '#000000', foreground= '#272AB0', command=self.Sixteen) #Creates a button that is pressable that will initiate function below Font is for the button not the text in the button
-        self.b3=Button(win,text="20 Characters",font=("Georgia", 12, 'bold'), background= '#000000', foreground= '#272AB0', command=self.Twenty) #Creates a button that is pressable that will initiate function below Font is for the button not the text in the button
-
-        self.lbl4=Label(win, text='1337 Password:',font=("Georgia", 10, 'bold'), background= '#000000', foreground= '#272AB0') #Creates a label that is not pressable
-
+        
+        self.b1=Button(win, text='12 Characters',font=("Georgia", 12, 'bold'), background=  '#1c5858', foreground= '#f69000', command=self.Twelve) #Creates a button that is pressable that will initiate function below, Font is for the button not the text in the button
+        self.b2=Button(win, text='16 Characters',font=("Georgia", 12, 'bold'), background=  '#1c5858', foreground= '#f69000', command=self.Sixteen) #Creates a button that is pressable that will initiate function below Font is for the button not the text in the button
+        self.b3=Button(win,text="20 Characters",font=("Georgia", 12, 'bold'), background=  '#1c5858', foreground= '#f69000', command=self.Twenty) #Creates a button that is pressable that will initiate function below Font is for the button not the text in the button
+        self.b4=Button(win,text="Close",font=("Georgia", 12, 'bold'), background=  '#1c5858', foreground= '#f69000', command=window.destroy) #Creates a button that is pressable that will initiate function below Font is for the button not the text in the button
+        self.lbl4=Label(win, text='1337 Password:',font=("Georgia", 10, 'bold'), background=  '#11222c', foreground= '#f69000') #Creates a label that is not pressable
+        self.lbl5=Label(win, text='1337 Password Generator',font=("Georgia", 16, 'bold'), background=  '#11222c', foreground= '#f69000') #Creates a label that is not pressable
         self.t4=Entry(font="Georgia") #Creates an entry box that is typeable and will display font selected
 
-        self.b1.place(x=140, y=50) #Places button in the location provided
-        self.b2.place(x=140, y=100) #Places button in the location provided
-        self.b3.place(x=140,y=150) #Places button in the location provided
-        self.lbl4.place(x=38, y=200) #Places label in the location provided
-        self.t4.place(x=156, y=200) #Places entry box in the location provided
-              
+        self.b1.place(x=140, y=70) #Places button in the location provided
+        self.b2.place(x=140, y=120) #Places button in the location provided
+        self.b3.place(x=140,y=170) #Places button in the location provided
+        self.b4.place(x=170,y=300) #Places button in the location provided
+        self.lbl4.place(x=38, y=230) #Places label in the location provided
+        self.lbl5.place(x=50, y=20) #Places label in the location provided
+        self.t4.place(x=156, y=230) #Places entry box in the location provided
+     
     def Twelve(self): #When the 12 character button is pressed, this function activates 
         self.t4.delete(0, 'end') #Erases what is present in the entrybox so the new entry will be the only password showing
         def shuffle(string): #This function allows the random characters to be shuffled
@@ -110,8 +115,15 @@ class Password_Generator: #Creates Password Generator
         clipboard(password) #Saved the variable password to the clipboard
 
 window=Tk() #Opens a window with the specs listed above
+window.overrideredirect(1)
 mywin=Password_Generator(window) #Uses the class above (Password_Generator line 4) and all functions in the class
-window.title('1337 Password Generator') #Titles the Popup Window
-window.geometry("400x300") #Dictates how large the Window is when opened
-window.configure(bg="#000000")
+
+window.geometry("400x350") #Dictates how large the Window is when opened
+
+window.configure(bg="#11222c") #gives main window background color
+def move(event): #allows window to move on the desktop
+    x, y = window.winfo_pointerxy()
+    window.geometry(f"+{x}+{y}")
+
+window.bind('<B1-Motion>',move)
 window.mainloop() #Keeps the window(Password_Generator) open
